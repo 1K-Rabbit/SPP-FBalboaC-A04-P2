@@ -28,6 +28,8 @@ public class SumaDeMatrices {
        int[][]Matriz2 = GeneracionMatriz(r);
        
        MatricesSuma( Matriz1, Matriz2);
+       MatricesResta ( Matriz1, Matriz2);
+       MatricesMultiplicacion ( Matriz1, Matriz2);
        
 }
     
@@ -69,6 +71,7 @@ public class SumaDeMatrices {
    
     
     public static void MatricesSuma(int [][]Matriz1,int [][] Matriz2) {
+        System.out.println("La suma de matrices es: ");
         
         for(int i = 0; i <Matriz1.length; i++)
         {
@@ -144,13 +147,81 @@ public class SumaDeMatrices {
         
         return e;
     
-    
-    
-    
-    
     }
     
-    
+     public static void MatricesResta(int [][]Matriz1,int [][] Matriz2) {
+         
+        
+         System.out.println("La resta de matrices es: ");
+     
+       
+        for(int i = 0; i <Matriz1.length; i++)
+        {
+            for(int j = 0; j <Matriz1.length; j++)
+            {
+                    
+                Matriz2[i][j]-= Matriz1[i][j];
+                
+                
+                System.out.print(Matriz2[i][j]+" ");
+            }
+            System.out.println("");
+        }
+     }
+     
+     public static void MatricesMultiplicacion(int [][]a,int [][] b) {
+         
+         
+         
+         System.out.println("Calculo de Matriz 1 * Matriz 2.");
+         
+         
+         for ( int i = 0; i < a.length; i++) {
+         
+          for (int j = 0; j < a[1].length; j++  ) {
+         
+            for (int K =0; K< a.length; K++ ) {
+          
+                int Matriz3 = a[i][K] * b [K][j];
+                
+                System.out.println(Matriz3);
+           
+           
+          }
+            
+         
+         }
+         
+         
+         }
+         
+         
+             
+         
+         System.out.println("Calculo de Matriz 2 * Matriz 1.");
+         
+         
+         for ( int i = 0; i < a.length; i++) {
+         
+          for (int j = 0; j < a[1].length; j++  ) {
+         
+            for (int K =0; K< a.length; K++ ) {
+          
+                int Matriz3 = a[j][K] * b [K][i];
+                
+                System.out.println(Matriz3);
+           
+           
+          }
+            
+         
+         }
+         
+         
+         }
+           
+         
+     }
     
     
     
